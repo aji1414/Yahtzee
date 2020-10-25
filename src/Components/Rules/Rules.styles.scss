@@ -1,0 +1,25 @@
+.rules{
+    background: white;
+    height: 80%;
+    color: black !important;
+}
+
+.title-rules{
+    text-decoration: underline ;
+}
+
+.upper-rules,.lower-rules{
+    height: 40%;
+}
+
+table{
+    width: 100%;
+
+    tr:nth-child(even){
+        background: rgba(173, 172, 172, 0.76);
+    }
+
+    tr:nth-child(odd){
+        background: white;
+    }
+}

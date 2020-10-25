@@ -1,0 +1,12 @@
+.dice{
+    background:rgb(117, 29, 175);
+    height: 30%;
+}
+
+.roll-dice{
+
+    &:focus{
+        outline: none;
+    }
+    
+}
