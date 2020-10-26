@@ -17,9 +17,11 @@ table{
 
     tr:nth-child(even){
         background: rgba(173, 172, 172, 0.76);
+        cursor: pointer;
     }
 
     tr:nth-child(odd){
         background: white;
+        cursor: pointer;
     }
 }

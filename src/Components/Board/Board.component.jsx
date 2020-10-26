@@ -7,9 +7,8 @@ import Rules from "../Rules/Rules.component";
 class Board extends Component{
 
     state={
-        dice:[[1, true],[2, true],[3, true],[4, true],[5, true]],
-        rollsLeft: 2,
-        totalScore:0
+        dice:[[5, true],[4, true],[3, true],[2, true],[1, true]],
+        rollsLeft: 2
     }
 
     diceClick = (diceNo) => {
@@ -21,10 +20,13 @@ class Board extends Component{
         });
     }
 
-    rollDice = () =>{
-        // alert user if no more rolls left
-        if(this.state.rollsLeft === 0) return alert("No Rolls Left, pick a scoring!")
+    resetRolls = () => {
+        this.resetDice();
+        this.setState({rollsLeft: 2});
 
+    }
+
+    resetDice = () => {
         // define empty array for new dice numbers and push random numbers in
         let newDiceNumbers = [];
         for (var i = 0; i < 5; i++) {newDiceNumbers.push(this.randomNumber())};
@@ -38,7 +40,13 @@ class Board extends Component{
                 else return stateDice;
             })
         })
-        
+    }
+
+    rollDice = () =>{
+        // alert user if no more rolls left
+        if(this.state.rollsLeft === 0) return alert("No Rolls Left, pick a scoring!")
+
+        this.resetDice();
     }
 
     randomNumber = () => {
@@ -53,7 +61,7 @@ class Board extends Component{
                 rollDice={this.rollDice} 
                 dice={this.state.dice} 
                 rollsLeft={this.state.rollsLeft}/>
-                <Rules totalScore={this.state.totalScore}/>
+                <Rules resetRolls={this.resetRolls} dice={this.state.dice}/>
             </div>
         )
     }
