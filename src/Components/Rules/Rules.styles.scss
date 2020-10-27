@@ -2,6 +2,7 @@
     background: white;
     height: 80%;
     color: black !important;
+    position: relative;
 }
 
 .title-rules{
@@ -12,16 +13,51 @@
     height: 40%;
 }
 
+.total-score{
+    height: 20%;
+    cursor: pointer;
+    background: linear-gradient(to right, rgb(171, 207, 247) , rgb(0, 122, 255));
+    border-radius: 25px;
+    font-weight: 600;
+    color:white;
+
+    
+    &:focus{
+        outline: none;
+    }
+
+    .disabled{
+        pointer-events: none;
+    }
+        
+}
+
 table{
     width: 100%;
 
-    tr:nth-child(even){
-        background: rgba(173, 172, 172, 0.76);
-        cursor: pointer;
+    tr{
+        font-weight: 500;
+
+        &:nth-child(even){
+            background: rgba(173, 172, 172, 0.76);
+            cursor: pointer;
+        }
+
+        &:nth-child(odd){
+            background: white;
+            cursor: pointer;
+        }
     }
 
-    tr:nth-child(odd){
-        background: white;
-        cursor: pointer;
-    }
+    .cross{
+        background: rgb(0, 122, 255) !important;
+        cursor: not-allowed !important;
+        pointer-events: none;
+        // text-decoration: line-through;
+        transition: all 2s ease;
+
+        & td:first-child{
+            text-decoration: line-through;
+        }
+    }    
 }

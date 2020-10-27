@@ -8,7 +8,16 @@ class Board extends Component{
 
     state={
         dice:[[5, true],[4, true],[3, true],[2, true],[1, true]],
-        rollsLeft: 2
+        rollsLeft: 2,
+        randomize: true
+    }
+
+    startGame = () => {
+        this.resetRolls();
+        this.setState({
+            randomize:false
+        })
+
     }
 
     diceClick = (diceNo) => {
@@ -23,7 +32,6 @@ class Board extends Component{
     resetRolls = () => {
         this.resetDice();
         this.setState({rollsLeft: 2});
-
     }
 
     resetDice = () => {
@@ -54,8 +62,10 @@ class Board extends Component{
     }
 
     render(){
+        if(this.state.randomize === true) this.startGame();
+
         return(
-            <div className="board p-0 d-flex flex-column col-10 col-sm-4">
+            <div className="board p-0 d-flex flex-column ">
                 <Dice 
                 diceClick={this.diceClick}
                 rollDice={this.rollDice} 

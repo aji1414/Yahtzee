@@ -40,6 +40,7 @@ export const handleFullHouse = (diceArray) => {
         else{counter[currentDiceNo] = 1;}
     })
     if(winner === true) return 25;
+    return 0;
 }
 
 export const handleStraight = (diceArray, straightType) => {

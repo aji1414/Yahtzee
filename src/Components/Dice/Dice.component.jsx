@@ -21,8 +21,7 @@ function Dice({dice, rollsLeft, diceClick, rollDice}){
             </div>
 
             <div className="game-buttons mb-2 d-flex justify-content-around">
-                <div className="rolls-left col-3">{rollsLeft} rolls left</div>
-                <button onClick={() => rollDice()} className="roll-dice col-9">ROLL DICE</button>
+                <button onClick={() => rollDice()} className="roll-dice col-12">ROLL DICE: {rollsLeft} rolls left</button>
             </div>
 
         </div>
