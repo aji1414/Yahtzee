@@ -5,6 +5,19 @@
     padding:10px 0;
 }
 
+.instructions{
+    cursor: pointer;
+    position: absolute;
+    top:0;
+    right:0;
+    background: red;
+    padding: 5px;
+    color:white;
+
+    &:focus{
+        color:white;
+    }
+}
 
 
 .game-buttons{

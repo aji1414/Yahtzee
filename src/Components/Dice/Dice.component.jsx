@@ -6,7 +6,7 @@ import Die from "../Die/Die.component";
 function Dice({dice, rollsLeft, diceClick, rollDice}){
     return(
         <div className="dice">
-
+            <a href="https://www.wikihow.com/Play-Yahtzee"><span className="instructions">How to play?</span></a>
             <h1 className="game-title pt-3">Yahtzee!</h1>
 
             <div className="dice-box d-flex justify-content-center px-3">
