@@ -1,8 +1,18 @@
 .rules{
     background: white;
-    height: 80%;
+    height: 600px;
     color: black !important;
     position: relative;
+
+    // @media only screen and (max-width:800px){
+    //     height:800px;
+    // }
+}
+
+.upper-rules,.lower-rules{
+    @media only screen and (max-width:800px){
+        // height:230px !important;
+    }
 }
 
 .title-rules{
@@ -10,11 +20,11 @@
 }
 
 .upper-rules,.lower-rules{
-    height: 40%;
+    height: 220px;
 }
 
 .total-score{
-    height: 20%;
+    height: 800px;
     cursor: pointer;
     background: linear-gradient(to right, rgb(171, 207, 247) , rgb(0, 122, 255));
     border-radius: 25px;

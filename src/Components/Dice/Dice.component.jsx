@@ -9,7 +9,7 @@ function Dice({dice, rollsLeft, diceClick, rollDice}){
 
             <h1 className="game-title pt-3">Yahtzee!</h1>
 
-            <div className="dice-box d-flex justify-content-center">
+            <div className="dice-box d-flex justify-content-center px-3">
                 {dice.map((die,index) => (
                     <Die 
                     key={index}

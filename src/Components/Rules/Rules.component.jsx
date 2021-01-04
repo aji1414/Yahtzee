@@ -80,7 +80,7 @@ class Rules extends Component{
                 </table>
             </div>
 
-            <div className="lower-rules">
+            <div className="lower-rules mb-3">
                 <h1 className="title-rules">Lower</h1>
                 <table>
                     <tbody>
