@@ -29,6 +29,15 @@ class Board extends Component{
         });
     }
 
+    diceVisible = () =>{
+        console.log("triggered")
+        this.setState({
+            dice: this.state.dice.map(stateDice =>{
+                return [stateDice[0], true];
+            })
+        })
+    };
+
     resetRolls = () => {
         this.resetDice();
         this.setState({rollsLeft: 2});
@@ -70,8 +79,13 @@ class Board extends Component{
                 diceClick={this.diceClick}
                 rollDice={this.rollDice} 
                 dice={this.state.dice} 
-                rollsLeft={this.state.rollsLeft}/>
-                <Rules resetRolls={this.resetRolls} dice={this.state.dice}/>
+                rollsLeft={this.state.rollsLeft}
+                />
+                <Rules 
+                resetRolls={this.resetRolls} 
+                dice={this.state.dice}
+                diceVisible={this.diceVisible}
+                />
             </div>
         )
     }

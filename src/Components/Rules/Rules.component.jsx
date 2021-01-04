@@ -23,6 +23,7 @@ class Rules extends Component{
             , () => {
             this.props.resetRolls("yes");
         })
+        this.props.diceVisible();
     }
 
     upper = (diceArray, diceNumber, rowCrossOff) => {
@@ -57,6 +58,7 @@ class Rules extends Component{
             sectionScore: [false,false,false,false,false,false,false,false,false,false,false,false,false]
         });
         this.props.resetRolls();
+        this.props.diceVisible();
     }
 
     render(){
@@ -94,9 +96,9 @@ class Rules extends Component{
                     </tbody>
                 </table>
                 {gameEnd === true
-            ? <div className="total-score"><h3 onClick={this.resetEntireGame}>YOU SCORED {this.state.totalScore}pts! PLAY AGAIN? </h3></div>
-            : <div className="total-score disabled"><h3>TOTAL SCORE IS: {this.state.totalScore} </h3></div>
-            }
+                    ? <div className="total-score"><h3 onClick={this.resetEntireGame}>YOU SCORED {this.state.totalScore}pts! PLAY AGAIN? </h3></div>
+                    : <div className="total-score disabled"><h3>TOTAL SCORE IS: {this.state.totalScore} </h3></div>
+                }
             </div>
 
             
