@@ -82,7 +82,7 @@ class Rules extends Component{
 
             <div className="lower-rules mb-3">
                 <h1 className="title-rules">Lower</h1>
-                <table>
+                <table className="mb-4">
                     <tbody>
                         <tr className={this.state.scoreVisible[6]} onClick={() => this.xOfKind(dice, 3, 6)}><td>3 of kind</td><td>{this.state.sectionScore[6] !== false ? this.state.sectionScore[6] : "Sum 3 equivalent dice"}</td></tr>
                         <tr className={this.state.scoreVisible[7]} onClick={() => this.xOfKind(dice, 4, 7)}><td>4 of kind</td><td>{this.state.sectionScore[7] !== false ? this.state.sectionScore[7] : "Sum 4 equivalent dice"}</td></tr>
@@ -93,11 +93,13 @@ class Rules extends Component{
                         <tr className={this.state.scoreVisible[12]} onClick={() => this.chance(dice, 12)}><td>Chance</td><td>{this.state.sectionScore[12] !== false ? this.state.sectionScore[12] : "Sum all dice"}</td></tr>
                     </tbody>
                 </table>
+                {gameEnd === true
+            ? <div className="total-score"><h3 onClick={this.resetEntireGame}>YOU SCORED {this.state.totalScore}pts! PLAY AGAIN? </h3></div>
+            : <div className="total-score disabled"><h3>TOTAL SCORE IS: {this.state.totalScore} </h3></div>
+            }
             </div>
 
-            {gameEnd === true
-            ? <h3 className="total-score pt-5" onClick={this.resetEntireGame}>YOU SCORED {this.state.totalScore}pts! PLAY AGAIN? </h3>
-            : <h3 className="total-score disabled pt-5" >TOTAL SCORE IS: {this.state.totalScore} </h3>}
+            
             
         </div>
         )
