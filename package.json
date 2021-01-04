@@ -1,6 +1,10 @@
 {
   "name": "yahtzee-game",
   "version": "0.1.0",
+  "engines": {
+    "node": "v14.15.1",
+    "npm": "6.14.8"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
