@@ -17,7 +17,6 @@ class Board extends Component{
         this.setState({
             randomize:false
         })
-
     }
 
     diceClick = (diceNo) => {
