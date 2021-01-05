@@ -67,12 +67,12 @@ class Rules extends Component{
         if(!this.state.sectionScore.includes(false)) {gameEnd = true};
 
         return(
-            <div className="rules d-flex flex-column ">
+            <div className="rules mt-3 d-flex flex-column ">
             <div className="upper-rules">
                 <h1 className="title-rules">Upper</h1>
                 <table>
                     <tbody>
-        <tr className={this.state.scoreVisible[0]} onClick={() => this.upper(dice, 1,0)}><td>Ones</td><td>{this.state.sectionScore[0] !== false ? this.state.sectionScore[0] : "1pt per 1"}</td></tr>
+                        <tr className={this.state.scoreVisible[0]} onClick={() => this.upper(dice, 1,0)}><td>Ones</td><td>{this.state.sectionScore[0] !== false ? this.state.sectionScore[0] : "1pt per 1"}</td></tr>
                         <tr className={this.state.scoreVisible[1]} onClick={() => this.upper(dice, 2, 1)}><td>Two's</td><td>{this.state.sectionScore[1] !== false ? this.state.sectionScore[1] : "2pts per 2"}</td></tr>
                         <tr className={this.state.scoreVisible[2]} onClick={() => this.upper(dice, 3, 2)}><td>Three's</td><td>{this.state.sectionScore[2] !== false ? this.state.sectionScore[2] : "3pts per 3"}</td></tr>
                         <tr className={this.state.scoreVisible[3]} onClick={() => this.upper(dice, 4, 3)}><td>Four's</td><td>{this.state.sectionScore[3] !== false ? this.state.sectionScore[3] : "4pts per 4"}</td></tr>

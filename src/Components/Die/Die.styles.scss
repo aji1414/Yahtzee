@@ -2,6 +2,10 @@
     cursor: pointer;
     font-size: 65px;
 
+    @media only screen and (max-width:800px){
+        font-size: 40px;
+    }
+
     &.greyed-out{
         color:black;
     }

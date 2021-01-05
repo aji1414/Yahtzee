@@ -7,7 +7,9 @@ function Dice({dice, rollsLeft, diceClick, rollDice}){
     return(
         <div className="dice">
             <a href="https://www.youtube.com/watch?v=AHDgpuEzopc&ab_channel=TripleSGames"><span className="instructions-video">How to play?</span></a>
-            <h1 className="game-title pt-3">Yahtzee!</h1>
+            <h1 className="game-title">Yahtzee!</h1>
+
+            <span className="roll-instructions">Click on die that you don't want to roll before clicking "roll dice"</span>
 
             <div className="dice-box d-flex justify-content-center px-3">
                 {dice.map((die,index) => (
@@ -20,7 +22,7 @@ function Dice({dice, rollsLeft, diceClick, rollDice}){
                 ))}
             </div>
 
-            <div className="game-buttons mb-2 d-flex justify-content-around">
+            <div className="game-buttons my-1 d-flex justify-content-around">
                 <button onClick={() => rollDice()} className="roll-dice col-12">ROLL DICE: {rollsLeft} rolls left</button>
             </div>
 

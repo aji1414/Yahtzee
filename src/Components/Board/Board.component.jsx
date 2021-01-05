@@ -71,13 +71,13 @@ class Board extends Component{
 
         return(
             <div className="board p-0 d-flex flex-column ">
-                <Dice 
+                <Dice
                 diceClick={this.diceClick}
                 rollDice={this.rollDice} 
                 dice={this.state.dice} 
                 rollsLeft={this.state.rollsLeft}
                 />
-                <Rules 
+                <Rules
                 resetRolls={this.resetRolls} 
                 dice={this.state.dice}
                 diceVisible={this.diceVisible}

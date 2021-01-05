@@ -1,8 +1,9 @@
 .rules{
     background: white;
-    height: 600px;
+    height: 60%;
     color: black !important;
     position: relative;
+    justify-content: space-evenly;
 }
 
 
@@ -15,7 +16,8 @@
 }
 
 .total-score{
-    height:190px;
+    height:30px;
+    font-size: 0.7em !important;
     display:flex;
     flex-direction: column;
     justify-content: center;

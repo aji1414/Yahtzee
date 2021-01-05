@@ -1,8 +1,15 @@
 .dice{
     background:rgb(117, 29, 175);
-    height: 220px;
+    height: 23%;
     position: relative;
-    padding:10px 0;
+    @media only screen and (max-width:800px){
+        height: 25%;
+    }
+}
+
+.roll-instructions{
+    font-style: italic;
+    font-size: 0.8em;
 }
 
 .instructions-video{
@@ -21,16 +28,12 @@
 
 
 .game-buttons{
-    position: absolute;
-    bottom: 0;
+    // @media only screen and (max-width:800px){
+    //     height:50%;
+    // }
     width: 100%;
 
-    .rolls-left{
-        background: linear-gradient(to right, rgb(181, 126, 218) , rgb(119, 7, 153));
-        color:white;
-        font-weight: 800;
-        border-radius: 55px
-    }
+    
 
     .roll-dice{
         cursor: pointer;
