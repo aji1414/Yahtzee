@@ -29,11 +29,8 @@ class Board extends Component{
     }
 
     diceVisible = () =>{
-        console.log("triggered")
         this.setState({
-            dice: this.state.dice.map(stateDice =>{
-                return [stateDice[0], true];
-            })
+            dice: this.state.dice.map(stateDice => [stateDice[0], true])
         })
     };
 
